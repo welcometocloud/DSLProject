@@ -1,11 +1,15 @@
-job('DSL-Tutorial-1-Test') {
-    scm {
-        git('git://github.com/quidryan/aws-sdk-test.git')
+pipelineJob('job-dsl-plugin') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('https://github.com/jenkinsci/job-dsl-plugin.git')
+          }
+          branch('*/master')
+        }
+      }
+      lightweight()
     }
-    triggers {
-        scm('H/15 * * * *')
-    }
-    steps {
-        maven('-e clean test')
-    }
+  }
 }
