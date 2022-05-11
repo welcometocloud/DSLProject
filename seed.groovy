@@ -6,17 +6,6 @@ job("MyProject-Build") {
     parameters {
         stringParam('COMMIT', 'HEAD', 'Commit to build')
     }
-    scm {
-        git {
-            remote {
-                url gitUrl.
-            }
-            extensions {
-                wipeOutWorkspace()
-                localBranch main
-            }
-        }
-    }
     steps {
         shell "Look: I'm building master!"
     }
