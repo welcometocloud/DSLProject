@@ -1,4 +1,4 @@
-def gitUrl = ""
+def gitUrl = "https://github.com/welcometocloud/DSLProject.git"
 
 job("MyProject-Build") {
     description "Builds MyProject from master branch."
