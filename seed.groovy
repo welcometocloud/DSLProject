@@ -7,6 +7,6 @@ job("MyProject-Build") {
         stringParam('COMMIT', 'HEAD', 'Commit to build')
     }
     steps {
-        shell(" echo Look: I'm building master!" )
+        shell(" echo Look: I am building master!" )
     }
 }
