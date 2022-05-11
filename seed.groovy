@@ -20,4 +20,9 @@ job("MyProject-Build") {
     steps {
         shell "Look: I'm building master!"
     }
+    post { 
+        always { 
+            cleanWs()
+        }
+    }
 }
