@@ -9,11 +9,11 @@ job("MyProject-Build") {
         git {
             remote {
                 url gitUrl.
-                branch "origin/master"
+                branch "origin/main"
             }
             extensions {
                 wipeOutWorkspace()
-                localBranch master
+                localBranch main
             }
         }
     }
